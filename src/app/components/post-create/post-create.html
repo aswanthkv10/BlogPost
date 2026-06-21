@@ -1,0 +1,25 @@
+<h2>Create Post</h2>
+
+<input
+placeholder="Title"
+[(ngModel)]="post.title"
+/>
+
+<br><br>
+
+<input
+placeholder="Author"
+[(ngModel)]="post.author"
+/>
+
+<br><br>
+
+<textarea
+[(ngModel)]="post.content">
+</textarea>
+
+<br><br>
+
+<button (click)="savePost()">
+Save
+</button>

@@ -41,3 +41,20 @@ __screenshots__/
 # System files
 .DS_Store
 Thumbs.db
+
+# Angular
+front-end/node_modules
+front-end/dist
+
+# Node
+back-end/node_modules
+
+# Environment files
+.env
+
+# Logs
+npm-debug.log*
+
+# OS
+.DS_Store
+Thumbs.db

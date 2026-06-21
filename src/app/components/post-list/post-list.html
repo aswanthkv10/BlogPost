@@ -1,0 +1,53 @@
+<h2>Blog Posts</h2>
+
+<a routerLink="/create">
+  Create New Post
+</a>
+
+<br><br>
+
+<input
+type="text"
+[(ngModel)]="search"
+(keyup)="loadPosts()"
+placeholder="Search Title"
+/>
+
+<table border="1">
+
+<tr>
+  <th>Title</th>
+  <th>Author</th>
+  <th>Actions</th>
+</tr>
+
+@for(post of posts; track post.id){
+
+<tr>
+
+<td>{{post.title}}</td>
+
+<td>{{post.author}}</td>
+
+<td>
+
+<a [routerLink]="['/post',post.id]">
+View
+</a>
+<a [routerLink]="['/edit',post.id]">
+Edit
+</a>
+
+|
+
+<button (click)="deletePost(post.id)">
+Delete
+</button>
+
+</td>
+
+</tr>
+
+}
+
+</table>
