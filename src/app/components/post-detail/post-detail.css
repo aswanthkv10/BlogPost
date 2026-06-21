@@ -1,0 +1,20 @@
+.post-card {
+  max-width: 700px;
+  margin: 40px auto;
+  padding: 20px;
+  border: 1px solid #ddd;
+  border-radius: 8px;
+}
+
+h2 {
+  margin-bottom: 20px;
+}
+
+.content {
+  line-height: 1.6;
+  margin-bottom: 20px;
+}
+
+.author {
+  font-size: 14px;
+}

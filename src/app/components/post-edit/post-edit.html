@@ -1,18 +1,36 @@
-<h2>Edit Post</h2>
+<div class="container">
 
-<input [(ngModel)]="post.title">
+  <h2>Edit Post</h2>
 
-<br><br>
+  <div class="form-group">
+    <label>Title</label>
+    <input
+      type="text"
+      [(ngModel)]="post.title"
+      placeholder="Enter title"
+    />
+  </div>
 
-<input [(ngModel)]="post.author">
+  <div class="form-group">
+    <label>Author</label>
+    <input
+      type="text"
+      [(ngModel)]="post.author"
+      placeholder="Enter author"
+    />
+  </div>
 
-<br><br>
+  <div class="form-group">
+    <label>Content</label>
+    <textarea
+      rows="6"
+      [(ngModel)]="post.content"
+      placeholder="Enter content"
+    ></textarea>
+  </div>
 
-<textarea [(ngModel)]="post.content">
-</textarea>
+  <button (click)="updatePost()">
+    Update Post
+  </button>
 
-<br><br>
-
-<button (click)="updatePost()">
-Update
-</button>
+</div>

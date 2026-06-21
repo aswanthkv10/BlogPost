@@ -1,25 +1,34 @@
-<h2>Create Post</h2>
+<div class="container">
+  <h2>Create Blog Post</h2>
 
-<input
-placeholder="Title"
-[(ngModel)]="post.title"
-/>
+  <div class="form-group">
+    <label>Title</label>
+    <input
+      type="text"
+      placeholder="Enter title"
+      [(ngModel)]="post.title"
+    />
+  </div>
 
-<br><br>
+  <div class="form-group">
+    <label>Author</label>
+    <input
+      type="text"
+      placeholder="Enter author name"
+      [(ngModel)]="post.author"
+    />
+  </div>
 
-<input
-placeholder="Author"
-[(ngModel)]="post.author"
-/>
+  <div class="form-group">
+    <label>Content</label>
+    <textarea
+      rows="6"
+      placeholder="Write your content here..."
+      [(ngModel)]="post.content"
+    ></textarea>
+  </div>
 
-<br><br>
-
-<textarea
-[(ngModel)]="post.content">
-</textarea>
-
-<br><br>
-
-<button (click)="savePost()">
-Save
-</button>
+  <button (click)="savePost()">
+    Save Post
+  </button>
+</div>

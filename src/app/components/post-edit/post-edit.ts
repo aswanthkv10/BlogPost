@@ -8,7 +8,8 @@ import { Service } from '../../service/service';
   selector: 'app-post-edit',
   standalone: true,
   imports:[FormsModule],
-  templateUrl:'./post-edit.html'
+  templateUrl:'./post-edit.html',
+   styleUrl: './post-edit.css'
 })
 export class PostEdit implements OnInit {
 

@@ -8,7 +8,8 @@ import { Service } from '../../service/service';
   selector: 'app-post-create',
   standalone: true,
   imports: [FormsModule],
-  templateUrl: './post-create.html'
+  templateUrl: './post-create.html',
+   styleUrl: './post-create.css'
 })
 export class PostCreate {
 

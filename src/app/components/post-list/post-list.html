@@ -1,53 +1,43 @@
-<h2>Blog Posts</h2>
+<div class="container">
+  <h2>Blog Posts</h2>
 
-<a routerLink="/create">
-  Create New Post
-</a>
+  <div class="top-bar">
+    <input
+      type="text"
+      [(ngModel)]="search"
+      (keyup)="loadPosts()"
+      placeholder="Search by title..."
+    />
 
-<br><br>
+    <a routerLink="/create" class="create-btn"> + Create Post </a>
+  </div>
 
-<input
-type="text"
-[(ngModel)]="search"
-(keyup)="loadPosts()"
-placeholder="Search Title"
-/>
+  <table>
+    <thead>
+      <tr>
+        <th>Title</th>
+        <th>Author</th>
+        <th>Actions</th>
+      </tr>
+    </thead>
 
-<table border="1">
+    <tbody>
+      @for (post of posts; track post.id) {
+        <tr>
+          <td>{{ post.title }}</td>
 
-<tr>
-  <th>Title</th>
-  <th>Author</th>
-  <th>Actions</th>
-</tr>
+          <td>{{ post.author }}</td>
 
-@for(post of posts; track post.id){
+          <td>
+            <a [routerLink]="['/post', post.id]"> View </a> |
+            <a [routerLink]="['/edit', post.id]"> Edit </a>
 
-<tr>
+            |
 
-<td>{{post.title}}</td>
-
-<td>{{post.author}}</td>
-
-<td>
-
-<a [routerLink]="['/post',post.id]">
-View
-</a>
-<a [routerLink]="['/edit',post.id]">
-Edit
-</a>
-
-|
-
-<button (click)="deletePost(post.id)">
-Delete
-</button>
-
-</td>
-
-</tr>
-
-}
-
-</table>
+            <button (click)="deletePost(post.id)">Delete</button>
+          </td>
+        </tr>
+      }
+    </tbody>
+  </table>
+</div>

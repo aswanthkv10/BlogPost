@@ -1,0 +1,51 @@
+.container {
+  width: 80%;
+  margin: 30px auto;
+}
+
+h2 {
+  text-align: center;
+  margin-bottom: 20px;
+}
+
+.top-bar {
+  display: flex;
+  justify-content: space-between;
+  margin-bottom: 20px;
+}
+
+input {
+  width: 300px;
+  padding: 8px;
+}
+
+.create-btn {
+  text-decoration: none;
+  padding: 8px 15px;
+  border: 1px solid #333;
+}
+
+table {
+  width: 100%;
+  border-collapse: collapse;
+}
+
+th,
+td {
+  border: 1px solid #ddd;
+  padding: 10px;
+  text-align: left;
+}
+
+th {
+  font-weight: bold;
+}
+
+button {
+  padding: 5px 10px;
+  cursor: pointer;
+}
+
+a {
+  text-decoration: none;
+}

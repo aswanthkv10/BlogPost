@@ -5,7 +5,8 @@ import { Service } from '../../service/service';
 @Component({
   selector: 'app-post-detail',
   standalone: true,
-  templateUrl: './post-detail.html'
+  templateUrl: './post-detail.html',
+   styleUrl: './post-detail.css'
 })
 export class PostDetail implements OnInit {
 
